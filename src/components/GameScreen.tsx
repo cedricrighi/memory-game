@@ -6,15 +6,15 @@ import { useEffect, useState } from "react";
 import TitleBar from "./TitleBar";
 import { useWin } from "../context/WinContext";
 import appleLogo from "../assets/images/apple-logo.svg";
-import bootstrapLogo from "../assets/images/bootstrap-logo.svg";
-import chromeLogo from "../assets/images/chrome-logo.svg";
-import githubLogo from "../assets/images/github-logo.svg";
-import jsLogo from "../assets/images/js-logo.svg";
-import mysqlLogo from "../assets/images/mysql-logo.svg";
-import nodejsLogo from "../assets/images/nodejs-logo.svg";
-import notionLogo from "../assets/images/notion-logo.svg";
-import reactLogo from "../assets/images/react-logo.svg";
-import viteLogo from "../assets/images/vite-logo.svg";
+import bootstrapLogo from "/bootstrap-logo.svg";
+import chromeLogo from "/chrome-logo.svg";
+import githubLogo from "/github-logo.svg";
+import jsLogo from "/js-logo.svg";
+import mysqlLogo from "/mysql-logo.svg";
+import nodejsLogo from "/nodejs-logo.svg";
+import notionLogo from "/notion-logo.svg";
+import reactLogo from "/react-logo.svg";
+import viteLogo from "/vite-logo.svg";
 
 export default function GameScreen() {
 	const difficultiesArray: [number, string, number][] = [
