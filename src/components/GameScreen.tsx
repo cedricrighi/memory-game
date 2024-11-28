@@ -75,7 +75,7 @@ export default function GameScreen() {
 
 	useEffect(() => {
 		if (isPlaying && flippedTrueArray.length > 0 && shuffledTiles.length > 0) {
-			if (flippedTrueArray.length === shuffledTiles.length * 2) {
+			if (flippedTrueArray.length === shuffledTiles.length) {
 				setWin(true);
 			}
 		}
