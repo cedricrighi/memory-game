@@ -1,0 +1,38 @@
+.buttons-list {
+	display: flex;
+	flex-direction: column;
+	gap: 5vw;
+	margin-left: 35vw;
+	margin-top: 10vw;
+}
+
+.difficulty-button {
+	width: 30vw;
+	padding: 2vw 2vw;
+	border-radius: 2vw;
+	background-color: #108cff;
+	color: #f9f9f9;
+	border: none;
+	font-size: 5vw;
+}
+
+.game-grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: fit-content;
+	gap: 5vw;
+	margin-top: 5vw;
+}
+
+@media screen and (width > 600px) {
+	.game-grid {
+		margin-top: 1vw;
+		gap: 3vw;
+	}
+}
+
+@media screen and (width > 900px) {
+	.game-grid {
+		margin-top: 2vw;
+	}
+}

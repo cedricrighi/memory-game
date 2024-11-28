@@ -1,0 +1,50 @@
+.title-bar {
+	display: flex;
+	padding-block: 6vw;
+	padding-inline: 4vw;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title-bar h1 {
+	font-size: 6vw;
+}
+
+.right-part-bar {
+	display: flex;
+	align-items: center;
+}
+
+.restart-button {
+	border: none;
+	border-radius: 2vw;
+	margin-left: 3vw;
+	padding: 2vw 3vw;
+	background-color: #108cff;
+	color: white;
+}
+
+@media screen and (width > 600px) {
+	.title-bar {
+		padding-block: 3vw;
+	}
+
+	.title-bar h1 {
+		font-size: 3vw;
+	}
+}
+
+@media screen and (width > 900px) {
+	.title-bar {
+		padding-block: 2vw;
+	}
+	.title-bar h1 {
+		font-size: 2vw;
+	}
+
+	.restart-button {
+		border-radius: 1vw;
+		margin-left: 3vw;
+		padding: 1vw 2vw;
+	}
+}
