@@ -98,11 +98,7 @@ export default function MiniCardImg({
 			<div className="mini-card-content">
 				<div className="mini-card-front" />
 				<div className="mini-card-back">
-					<img
-						src={`/${logo}-logo.svg`}
-						alt={`${logo} card`}
-						className="mini-card-img"
-					/>
+					<img src={logo} alt={`${logo} card`} className="mini-card-img" />
 				</div>
 			</div>
 		</div>

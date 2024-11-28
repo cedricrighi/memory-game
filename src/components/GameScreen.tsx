@@ -5,6 +5,16 @@ import MiniCardImg from "./MiniCardImg";
 import { useEffect, useState } from "react";
 import TitleBar from "./TitleBar";
 import { useWin } from "../context/WinContext";
+import appleLogo from "../assets/images/apple-logo.svg";
+import bootstrapLogo from "../assets/images/bootstrap-logo.svg";
+import chromeLogo from "../assets/images/chrome-logo.svg";
+import githubLogo from "../assets/images/github-logo.svg";
+import jsLogo from "../assets/images/js-logo.svg";
+import mysqlLogo from "../assets/images/mysql-logo.svg";
+import nodejsLogo from "../assets/images/nodejs-logo.svg";
+import notionLogo from "../assets/images/notion-logo.svg";
+import reactLogo from "../assets/images/react-logo.svg";
+import viteLogo from "../assets/images/vite-logo.svg";
 
 export default function GameScreen() {
 	const difficultiesArray: [number, string, number][] = [
@@ -16,16 +26,16 @@ export default function GameScreen() {
 	];
 
 	const tilesArray: [string, number][] = [
-		["react", 1],
-		["vite", 2],
-		["bootstrap", 3],
-		["chrome", 4],
-		["js", 5],
-		["github", 6],
-		["apple", 7],
-		["mysql", 8],
-		["nodejs", 9],
-		["notion", 10],
+		[reactLogo, 1],
+		[viteLogo, 2],
+		[bootstrapLogo, 3],
+		[chromeLogo, 4],
+		[jsLogo, 5],
+		[githubLogo, 6],
+		[appleLogo, 7],
+		[mysqlLogo, 8],
+		[nodejsLogo, 9],
+		[notionLogo, 10],
 	];
 
 	const paddingLeftGrid = {
