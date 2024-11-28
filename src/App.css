@@ -4,3 +4,31 @@ body {
 	background-color: #f9f9f9;
 	font-family: "Lato", sans-serif;
 }
+
+#root {
+	min-height: 98vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.main-app-component {
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5vw;
+	padding-block: 2vw;
+	border-top: 2px solid #108cff;
+}
+
+@media screen and (width > 600px) {
+	footer {
+		margin-top: 2vw;
+		padding-block: 1vw;
+	}
+}

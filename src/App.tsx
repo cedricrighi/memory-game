@@ -14,8 +14,13 @@ function AppContent() {
 			<MovesScoreProvider>
 				<DifficultyProvider>
 					<PlayingProvider>
-						<GameScreen />
-						{win && <WinScreen />}
+						<div className="main-app-component">
+							<GameScreen />
+							{win && <WinScreen />}
+						</div>
+						<footer>
+							<div className="copyright">© 2024 Jeu de Mémoire</div>
+						</footer>
 					</PlayingProvider>
 				</DifficultyProvider>
 			</MovesScoreProvider>
