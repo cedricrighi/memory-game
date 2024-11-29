@@ -50,7 +50,7 @@ export default function GameScreen() {
 	};
 	const { isPlaying, setIsPlaying } = usePlaying();
 	const { setWin } = useWin();
-	const [numberTiles, setNumberTiles] = useState(0);
+	const [_, setNumberTiles] = useState(0);
 	const [flippedArray, setFlippedArray] = useState<number[]>([]);
 	const [flippedTrueArray, setFlippedTrueArray] = useState<number[]>([]);
 	const [shuffledTiles, setShuffledTiles] = useState<[string, string][]>([]);
@@ -83,17 +83,21 @@ export default function GameScreen() {
 
 	useEffect(() => {
 		if (isPlaying) {
-			setNumberTiles(() => difficultiesArray[difficulty - 1][2]);
-			const newTiles = tilesArray.slice(0, numberTiles).flatMap(
-				(tile) =>
-					[
-						[tile[0], tile[1].toString()],
-						[tile[0], tile[1].toString()],
-					] as [string, string][],
-			);
-			setShuffledTiles(newTiles.sort(() => Math.random() - 0.5));
+			const newNumberTiles = difficultiesArray[difficulty - 1][2];
+			setNumberTiles(newNumberTiles);
+			const allCards: [string, string][] = [];
+			for (const tile of tilesArray.slice(0, newNumberTiles)) {
+				allCards.push([tile[0], tile[1].toString()]);
+				allCards.push([tile[0], tile[1].toString()]);
+			}
+
+			for (let i = allCards.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[allCards[i], allCards[j]] = [allCards[j], allCards[i]];
+			}
+			setShuffledTiles(allCards);
 		}
-	}, [isPlaying, difficulty, numberTiles]);
+	}, [isPlaying, difficulty]);
 
 	return (
 		<>
