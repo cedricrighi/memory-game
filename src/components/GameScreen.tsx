@@ -97,7 +97,7 @@ export default function GameScreen() {
 			}
 			setShuffledTiles(allCards);
 		}
-	}, [isPlaying, difficulty]);
+	}, [isPlaying, difficulty, tilesArray.slice]);
 
 	return (
 		<>
@@ -122,18 +122,7 @@ export default function GameScreen() {
 					))}
 				</div>
 			) : (
-				<div
-					className="game-grid"
-					style={{ paddingLeft: `${paddingLeft}vw` }}
-					onClick={() => {
-						console.log(shuffledTiles);
-					}}
-					onKeyUp={(e) => {
-						if (e.key === "Enter" || e.key === " ") {
-							console.log(shuffledTiles);
-						}
-					}}
-				>
+				<div className="game-grid" style={{ paddingLeft: `${paddingLeft}vw` }}>
 					{shuffledTiles.map((tile, index) => (
 						<MiniCardImg
 							key={`${tile[0]}-${index}`}

@@ -91,7 +91,6 @@ export default function MiniCardImg({
 				if (flippedArray.length < 2 && !flippedTrueArray.includes(cardId)) {
 					handleClickFlip();
 				}
-				console.log(flippedTrueArray);
 			}}
 			onKeyDown={handleClickFlip}
 		>
