@@ -75,7 +75,7 @@ export default function GameScreen() {
 
 	useEffect(() => {
 		if (isPlaying && flippedTrueArray.length > 0 && shuffledTiles.length > 0) {
-			if (flippedTrueArray.length === shuffledTiles.length) {
+			if (flippedTrueArray.length === shuffledTiles.length * 2) {
 				setWin(true);
 			}
 		}
@@ -84,17 +84,14 @@ export default function GameScreen() {
 	useEffect(() => {
 		if (isPlaying) {
 			setNumberTiles(() => difficultiesArray[difficulty - 1][2]);
-			const newTiles = tilesArray
-				.slice(0, numberTiles)
-				.flatMap(
-					(tile) =>
-						[
-							[tile[0], tile[1].toString()],
-							[tile[0], tile[1].toString()],
-						] as [string, string][],
-				)
-				.sort(() => Math.random() - 0.5);
-			setShuffledTiles(newTiles);
+			const newTiles = tilesArray.slice(0, numberTiles).flatMap(
+				(tile) =>
+					[
+						[tile[0], tile[1].toString()],
+						[tile[0], tile[1].toString()],
+					] as [string, string][],
+			);
+			setShuffledTiles(newTiles.sort(() => Math.random() - 0.5));
 		}
 	}, [isPlaying, difficulty, numberTiles]);
 
