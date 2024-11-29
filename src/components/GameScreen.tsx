@@ -128,6 +128,11 @@ export default function GameScreen() {
 					onClick={() => {
 						console.log(shuffledTiles);
 					}}
+					onKeyUp={(e) => {
+						if (e.key === "Enter" || e.key === " ") {
+							console.log(shuffledTiles);
+						}
+					}}
 				>
 					{shuffledTiles.map((tile, index) => (
 						<MiniCardImg
