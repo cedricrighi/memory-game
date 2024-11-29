@@ -122,7 +122,13 @@ export default function GameScreen() {
 					))}
 				</div>
 			) : (
-				<div className="game-grid" style={{ paddingLeft: `${paddingLeft}vw` }}>
+				<div
+					className="game-grid"
+					style={{ paddingLeft: `${paddingLeft}vw` }}
+					onClick={() => {
+						console.log(shuffledTiles);
+					}}
+				>
 					{shuffledTiles.map((tile, index) => (
 						<MiniCardImg
 							key={`${tile[0]}-${index}`}
